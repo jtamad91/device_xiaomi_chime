@@ -102,8 +102,7 @@ PRODUCT_PACKAGES += \
     libcamera2ndk_vendor \
     libdng_sdk.vendor \
     libstdc++_vendor \
-    libgui_vendor \
-    OpenCamera
+    libgui_vendor
 
 # Component overrides
 PRODUCT_COPY_FILES += \
@@ -219,14 +218,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     lights.bengal
 
-# KernelSU
-#PRODUCT_PACKAGES += \
-#    KSUManager
-
-#PRODUCT_COPY_FILES += \
-#    $(LOCAL_PATH)/KSUManager/lib/libkernelsu.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/libkernelsu.so \
-#    $(LOCAL_PATH)/KSUManager/lib/libksud.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/libksud.so
-
 # LiveDisplay
 PRODUCT_PACKAGES += \
     vendor.lineage.livedisplay@2.0-service-sdm
@@ -324,10 +315,6 @@ PRODUCT_PACKAGES += \
     SystemUIResChime \
     TelephonyResChime \
     WifiResCommon
-
-# Package Mgmt
-PRODUCT_PACKAGES += \
-#   RemovePackages (Disabled until prebuilts are worked out, or maybe even after)
 
 # PocketMode
 PRODUCT_PACKAGES += \
