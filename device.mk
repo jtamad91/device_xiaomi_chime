@@ -227,6 +227,10 @@ PRODUCT_PACKAGES += \
 #    $(LOCAL_PATH)/KSUManager/lib/libkernelsu.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/libkernelsu.so \
 #    $(LOCAL_PATH)/KSUManager/lib/libksud.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/libksud.so
 
+# LiveDisplay
+PRODUCT_PACKAGES += \
+    vendor.lineage.livedisplay@2.0-service-sdm
+
 # Keylayout
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keylayout/gpio-keys.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/gpio-keys.kl \
@@ -309,6 +313,9 @@ PRODUCT_PACKAGES += \
     libstagefright_omx.vendor
 
 # Overlays
+DEVICE_PACKAGE_OVERLAYS += \
+    $(LOCAL_PATH)/overlay-lineage
+
 PRODUCT_PACKAGES += \
     CarrierConfigOverlay \
     FrameworksCustomChime \
@@ -514,6 +521,10 @@ PRODUCT_PACKAGES += \
 # Touchscreen
 PRODUCT_PACKAGES += \
     libtinyxml2
+
+# Trust HAL
+PRODUCT_PACKAGES += \
+    vendor.lineage.trust@1.0-service
 
 # USB
 PRODUCT_PACKAGES += \
